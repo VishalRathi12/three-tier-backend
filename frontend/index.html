@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3 Tier App</title>
+</head>
+<body style="text-align:center;font-family:sans-serif;">
+  <h1>My 3 Tier App 🚀</h1>
+  <button onclick="loadUsers()">Load Users</button>
+  <ul id="userList"></ul>
+
+  <script>
+    async function loadUsers() {
+      const res = await fetch('http://<YOUR_VM_PUBLIC_IP>:3000/users');
+      const data = await res.json();
+      document.getElementById('userList').innerHTML =
+        data.map(u => `<li>${u.name}</li>`).join('');
+    }
+  </script>
+</body>
+</html>
