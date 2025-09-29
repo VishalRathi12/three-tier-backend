@@ -12,5 +12,9 @@
   "dependencies": {
     "express": "^5.1.0",
     "mysql2": "^3.15.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0"
   }
 }
